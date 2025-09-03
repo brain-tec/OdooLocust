@@ -4,7 +4,9 @@ from locust import task
 
 
 class Seller(OdooLocustUser.OdooLocustUser):
-    database = "testdb"
+    database = "locusttestdb"
+    login = "admin"
+    password = "admin"
 
     @task(10)
     def read_partners(self):
